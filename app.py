@@ -6,8 +6,9 @@ from openpyxl.styles import Alignment
 from openpyxl.utils import get_column_letter
 
 # API keys for SerpAPI and GroQ
-SERPAPI_KEY = "00f0bdf6f347bc7afa42b7c0219d2709893a30e275af60bc4db9756134391f62"
-GROQ_API_KEY = "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"
+SERPAPI_KEY = ""#add your own api key
+GROQ_API_KEY = ""#add your own api key
+
 
 def fetch_datasets_with_serpapi(keywords):
     """
@@ -204,69 +205,6 @@ def save_use_cases_to_excel_with_links(use_cases, datasets_file, file_name):
     # Save the Excel file
     wb.save(file_name)
     print(f"Use cases with dataset links saved to Excel: {file_name}")
-# Function Definition
-def save_use_cases_to_excel_with_links(use_cases, datasets_file, file_name):
-    """
-    Save the generated use cases to an Excel sheet with three columns: Use Case, Description, Dataset Links.
-    Each dataset link will be clickable and placed in the 'Dataset Links' column in separate rows.
-    """
-    wb = Workbook()
-    ws = wb.active
-    ws.title = "Use Cases"
-
-    # Add headers
-    ws.append(["Use Case", "Description", "Dataset Links"])
-
-    # Use the datasets_file_content directly instead of opening a file
-    with open(datasets_file, "r") as file:
-        dataset_links = json.load(file)
-
-    # Add use case data
-    for use_case in use_cases:
-        if "message" in use_case and "content" in use_case["message"]:
-            content = use_case["message"]["content"]
-            lines = content.split("\n")
-            titles = [line.split(":")[1].strip() for line in lines if line.startswith("Title")]
-            descriptions = [line.split(":")[1].strip() for line in lines if line.startswith("Description")]
-
-            for title, description in zip(titles, descriptions):
-                # Get dataset links for the title
-                platform_links = []
-                for platform in dataset_links:
-                    platform_links.extend(dataset_links[platform])
-
-                # Add the use case title and description in one row
-                row = [title, description]  # Use Case and Description in the first two columns
-                ws.append(row)
-                row_num = ws.max_row  # Get the last row number
-
-                # Add each link in the next rows under "Dataset Links" for the current use case
-                for link in platform_links:
-                    # Ensure the link starts with "http://"
-                    if not link.startswith(("http://", "https://")):
-                        link = f"http://{link}"
-
-                    # Move to the next row and add the hyperlink
-                    ws.append([None, None, link])  # Leave Use Case and Description as None
-                    new_row_num = ws.max_row  # Get the new row number
-
-                    # Add the hyperlink to the 'Dataset Links' column
-                    ws.cell(row=new_row_num, column=3, value=link).hyperlink = link  # Set the hyperlink property
-                    ws.cell(row=new_row_num, column=3).style = "Hyperlink"  # Optional: Apply a hyperlink style
-
-    # Auto-adjust the column width to fit the content
-    for col in range(1, 4):
-        column_letter = get_column_letter(col)
-        max_length = 0
-        for row in ws.iter_rows():
-            cell_value = str(row[col - 1].value) if row[col - 1].value else ""
-            max_length = max(max_length, len(cell_value))
-        adjusted_width = (max_length + 2)
-        ws.column_dimensions[column_letter].width = adjusted_width
-
-    # Save the Excel file
-    wb.save(file_name)
-    print(f"Use cases with dataset links saved to Excel: {file_name}")
 def main(company_name, output_path):
     """
     Main function to conduct industry research and generate use cases.
@@ -304,5 +242,5 @@ def main(company_name, output_path):
 # Example Execution
 if __name__ == "__main__":
     company_name = "infosys"
-    output_path = r"C:\Users\user\Desktop\internship Project"
+    output_path = r"C:\Users\user\Desktop\IP\reports"
     main(company_name, output_path)
