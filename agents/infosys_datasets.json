@@ -1,0 +1,69 @@
+{
+    "\"Conversational Customer Engagement using LLMs\"": {
+        "Kaggle": [
+            "https://www.kaggle.com/datasets/bitext/bitext-gen-ai-chatbot-customer-support-dataset",
+            "https://www.kaggle.com/code/utkarshsaxenadn/llms-prompt-engineering-dialog-summarization",
+            "https://www.kaggle.com/datasets/bitext/training-dataset-for-chatbotsvirtual-assistants",
+            "https://www.kaggle.com/datasets/kreeshrajani/3k-conversations-dataset-for-chatbot",
+            "https://www.kaggle.com/datasets/grafstor/simple-dialogs-for-chatbot"
+        ],
+        "GitHub": [],
+        "HuggingFace": [
+            "https://huggingface.co/VAIBHAV22334455/JARVIS/blob/4da46bad949c8043bc3d713791e33ad32bfac7b2/README.md",
+            "https://huggingface.co/blog/leaderboard-patronus",
+            "https://huggingface.co/datasets/llm-blender/Unified-Feedback",
+            "https://huggingface.co/spaces/VishnuRamDebyez/convo/resolve/8662c68595754e7c1288e36dc1c3f3b66f53edb9/Debyez%20detialed%20proposal%202.pdf?download=true",
+            "https://huggingface.co/learn/cookbook/clean_dataset_judges_distilabel"
+        ]
+    },
+    "\"Predictive Maintenance of Industrial Equipment using Machine Learning and IoT\"": {
+        "Kaggle": [],
+        "GitHub": [
+            "https://github.com/somjit101/Predictive-Maintenance-Industrial-IOT",
+            "https://github.com/Yi-Chen-Lin2019/Predictive-maintenance-with-machine-learning",
+            "https://github.com/aws-samples/amazon-sagemaker-predictive-maintenance-deployed-at-edge/blob/master/README.md",
+            "https://github.com/harrisonxia/Predictive-Maintenance",
+            "https://github.com/intel-iot-devkit/predictive-maintenance-python"
+        ],
+        "HuggingFace": [
+            "https://huggingface.co/datasets/S4MPL3BI4S/Fine_Tune_Data/viewer",
+            "https://huggingface.co/blog/researcher-dataset-sharing",
+            "https://huggingface.co/datasets/DL02/TM",
+            "https://huggingface.co/datasets/UCLAML/RPO-Iter2-New-312_generated",
+            "https://huggingface.co/datasets/wahid7399/Research_dataset/viewer/default/train?p=22"
+        ]
+    },
+    "\"Automated Content Generation for Marketing and Communication Materials\"": {
+        "Kaggle": [],
+        "GitHub": [],
+        "HuggingFace": [
+            "https://huggingface.co/google/gemma-2-27b-it-pytorch",
+            "https://huggingface.co/google/gemma-1.1-2b-it",
+            "https://huggingface.co/google/gemma-2-2b",
+            "https://huggingface.co/google/recurrentgemma-9b-it",
+            "https://huggingface.co/google/gemma-2-2b-jpn-it-pytorch"
+        ]
+    },
+    "\"Predictive Supply Chain Analytics using ML and GenAI\"": {
+        "Kaggle": [],
+        "GitHub": [],
+        "HuggingFace": []
+    },
+    "\"Automated Compliance and Risk Monitoring using Machine Learning\"": {
+        "Kaggle": [
+            "https://www.kaggle.com/code/karansarpal/machine-learning-for-risk-classification-ks",
+            "https://www.kaggle.com/questions-and-answers/372964",
+            "https://www.kaggle.com/code/gvyshnya/cybersecurity-ai-in-2022-2023",
+            "https://www.kaggle.com/datasets/krishuppal/helmet-detection",
+            "https://www.kaggle.com/general/530508"
+        ],
+        "GitHub": [],
+        "HuggingFace": [
+            "https://huggingface.co/datasets/alvanlii/finance-textbooks",
+            "https://huggingface.co/datasets/harleygilpin/soc-audit-11k",
+            "https://huggingface.co/datasets/harleygilpin/soc-audit-11k/viewer",
+            "https://huggingface.co/datasets/wyzard-ai/VivekRana123/viewer/",
+            "https://huggingface.co/Pelumioluwa/Sustainable-Finance-BERT"
+        ]
+    }
+}
